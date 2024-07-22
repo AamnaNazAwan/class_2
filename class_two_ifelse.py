@@ -1,7 +1,7 @@
-              #IF ELIF ELSE CONDITIONS
+   #IF ELIF ELSE CONDITIONS
               #NESTED CONDITION
 
-'''number = 15
+number = 15
 
 if number % 2 == 0:
     print("number is even")
@@ -17,42 +17,9 @@ fruits = ["apple", "banana", "cherry"]
 if fruit in fruits:
     print("fruit is in list")
 else:
-    print("fruit ia not in list")'''
+    print("fruit ia not in list")
 
-#RUN this command 3 times using while loop
-
-user_input = input("Enter the age of person")
-
-while user_input<=3:
- try:
-     age = int(user_input)
-if age < 0:
-      print("invalid age")
-elif  0 <= age <= 12:
-    print("you are a child")
-elif age  > 13 and age < 19:
-    print("you are a teenager")
-elif age >20 and age < 64:
-    print("you are a adult")
-elif age > 65:
-    print("you are senior")
- except ValueError:
-      print("Error : invalid age")
-   user_input +=1
-
-
-enter your age = 25
-you are an adult
-              
-              
-enter your age: -5
-invalid age
-              
-enter your age: seventeen
-please enter a valid number
-
-
-             #TRY EXCEPT
+#TRY EXCEPT
 
 try:
       value = int(input("enter the number"))
@@ -61,3 +28,28 @@ except ValueError:
        print("Error : invalid input")
 except ZeroDivisionError:
        print("Error : cannot divide by zero")
+
+#RUN this command 3 times using while loop
+attempts = 3
+
+while attempts > 0:
+    user_input = input("Enter the age of person: ")
+
+    try:
+        age = int(user_input)
+        if age < 0:
+            print("invalid age")
+        elif 0 <= age <= 12:
+            print("you are a child")
+        elif 13 <= age <= 19:
+            print("you are a teenager")
+        elif 20 <= age <= 64:
+            print("you are an adult")
+        elif age >= 65:
+            print("you are a senior")
+    except ValueError:
+        print("please enter a valid number")
+
+    attempts -= 1
+
+
